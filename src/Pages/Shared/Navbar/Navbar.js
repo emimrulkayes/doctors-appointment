@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     const menuItems = <React.Fragment>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/appointment">Appointment</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/reviews">Reviews</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/" className='text-black '>Home</Link></li>
+        <li><Link to="/appointment" className='text-black'>Appointment</Link></li>
+        <li><Link to="/about" className='text-black'>About</Link></li>
+        <li><Link to="/reviews" className='text-black'>Reviews</Link></li>
+        <li><Link to="/contact" className='text-black'>Contact</Link></li>
+        <li><Link to="/login" className='text-black'>Login</Link></li>
     </React.Fragment>
 
     return (
@@ -24,7 +24,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost normal-case text-xl">Doctor Bari</Link>
+                    <Link to="/" className=" normal-case text-xl font-bold text-secondary">Doctor Bari</Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
