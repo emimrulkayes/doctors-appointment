@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, formState: { errors }} = useForm();
     
     const handleLogin = data => {
         console.log(data);
@@ -17,16 +17,18 @@ const Login = () => {
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <div className='form-control w-full max-w-xs'>
                         <label className="label"><span className="label-text">Your Email</span></label>
-                        <input {...register("email")} name='email' type="text" className="input input-bordered w-full text-slate-700" required />
+                        <input {...register("email", {required: "Email Address is required"})} name='email' type="text" className="input input-bordered w-full text-slate-700" />
+                        {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
                     </div>
                     <div className='mt-3 form-control w-full max-w-xs'>
                         <label className="label"><span className="label-text">Password</span></label>
-                        <input {...register("password")} type='password' className="input input-bordered w-full text-slate-700" required />
+                        <input {...register("password", {required: "Password is required", minLength: {value: 6, message: "Password must be 6 or longer."}})} type='password' className="input input-bordered w-full text-slate-700" />
                     </div>
                     <div className='form-control w-full max-w-xs flex flex-row justify-between items-center'>
                         <label className="label"><span className="label-text">Forget password?</span></label>
                         <a href='#top' className="link link-accent text-secondary">Reset password</a>
                     </div>
+                    {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     <br />
                     <input type="submit" value="Login" className="btn text-white w-full" />
                 </form>
