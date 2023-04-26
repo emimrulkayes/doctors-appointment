@@ -12,21 +12,21 @@ const Cards = () => {
             name: 'Opening Hours',
             description: 'Open 8.00am to 4.00pm everyday.',
             icon: time,
-            bgClass: 'bg-gradient-to-r from-cyan-500 to-blue-500',
+            bgClass: 'bg-gradient-to-r from-cyan-500 to-blue-500'
         },
         {
             id: 2,
             name: 'Our Locations',
             description: 'Open 8.00am to 4.00pm everyday.',
             icon: location,
-            bgClass: 'bg-gradient-to-r from-violet-500 to-fuchsia-500',
+            bgClass: 'bg-gradient-to-r from-violet-500 to-fuchsia-500'
         },
         {
             id: 3,
             name: 'Contact Us',
             description: 'Open 8.00am to 4.00pm everyday.',
             icon: dial,
-            bgClass: 'bg-gradient-to-r from-cyan-500 to-blue-500',
+            bgClass: 'bg-gradient-to-r from-cyan-500 to-blue-500'
         },
     ]
 
