@@ -2,7 +2,6 @@ import React from 'react';
 import chair from '../../../assets/images/chair.png';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
-
 const Banner = () => {
     return (
         <div>
