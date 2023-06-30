@@ -17,11 +17,13 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className='form-control w-full max-w-xs'>
                         <label className="label"><span className="label-text text-gray-600 font-semibold">Name:</span></label>
-                        <input name='name' type="text" {...register("name")} className="input input-bordered w-full text-gray-400 font-normal border-gray-300" />
+                        <input name='name' type="text" {...register("name", {required: "Name is required"})} className="input input-bordered w-full text-gray-400 font-normal border-gray-300" />
+                        {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
                     <div className='form-control mt-3 w-full max-w-xs'>
                         <label className="label"><span className="label-text text-gray-600 font-semibold">Email:</span></label>
-                        <input name='email' type="email" {...register("email")} className="input input-bordered w-full text-gray-400 font-normal border-gray-300" />
+                        <input name='email' type="email" {...register("email", {required: "Email Address is required"})} className="input input-bordered w-full text-gray-400 font-normal border-gray-300" />
+                        {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
                     </div>
                     <div className='mt-3 form-control w-full max-w-xs'>
                         <label className="label"><span className="label-text text-gray-600 font-semibold">Password:</span></label>
