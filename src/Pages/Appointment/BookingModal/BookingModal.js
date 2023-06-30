@@ -26,7 +26,6 @@ const BookingModal = ({treatment, selectedDate, setTreatment}) => {
         console.log(booking);
     }
 
-
     return (
         <>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
@@ -38,9 +37,9 @@ const BookingModal = ({treatment, selectedDate, setTreatment}) => {
                         <input name='date' type="text" disabled value={date}  className="h-12 px-4 rounded-md w-full mt-2 bg-slate-400" />
                         <select name='slot' className="select select-bordered w-full mt-2">
                             {
-                                slots.map((slot, i) => <option 
+                                slots.map((slot, indexNum) => <option 
                                     value={slot}
-                                    key={i}
+                                    key={indexNum}
                                 >{slot}</option>)
                             }
                         </select>

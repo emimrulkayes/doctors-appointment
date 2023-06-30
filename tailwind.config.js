@@ -16,7 +16,11 @@ module.exports = {
     ]
   },
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'lg': '-1px 15px 50px 0px rgba(0, 0, 0, 0.2)',
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
